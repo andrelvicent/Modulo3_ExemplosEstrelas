@@ -1,31 +1,30 @@
 package br.com.zup.AulaDeMetodos.Exemplo3;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        // Instanciando o carro e o scanner
         Carro exemplo = new Carro("Ford ka", 500, "Ford", "Vermelho", 50000);
+        Scanner leitor = new Scanner(System.in);
 
-        // Testando os métodos criados
+        // Exibindo informações do carro
         exemplo.mostrarCarro();
+        System.out.println("----------------");
 
-        // Dar desconto
-        exemplo.darDesconto(5000);
+        // Lendo valor do desconto
+        System.out.println("Por favor, digite um valor de desconto: ");
+        double desconto = leitor.nextDouble();
+        leitor.nextLine();
 
-        // Testando os métodos criados
-        System.out.println("------------------");
-        exemplo.mostrarCarro();
+        // Lendo valor da nova cor
+        System.out.println("Por favor, digite a nova cor: ");
+        String cor = leitor.nextLine();
 
-        // Testando os métodos criados
-        System.out.println("------------------");
-        exemplo.pintar("Verde limão");
+        exemplo.darDesconto(desconto);
+        exemplo.pintar(cor);
 
-        // Testando os métodos criados
-        System.out.println("------------------");
-        exemplo.mostrarCarro();
-
-        exemplo.darDesconto(2000);
-
-        // Testando os métodos criados
-        System.out.println("------------------");
+        System.out.println("----------------");
         exemplo.mostrarCarro();
     }
 }
