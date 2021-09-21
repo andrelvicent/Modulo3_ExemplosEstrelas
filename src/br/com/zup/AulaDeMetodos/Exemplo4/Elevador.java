@@ -1,7 +1,7 @@
 package br.com.zup.AulaDeMetodos.Exemplo4;
 
 public class Elevador {
-    int andarAtual = 0;
+    protected int andarAtual = 0;
     int totalDeAndares;
     int capacidade;
     int qtdPessoasPresentes;
