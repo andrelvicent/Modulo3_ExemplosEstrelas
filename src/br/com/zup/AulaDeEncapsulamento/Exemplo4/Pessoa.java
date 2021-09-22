@@ -1,10 +1,13 @@
 package br.com.zup.AulaDeEncapsulamento.Exemplo4;
 
 public class Pessoa {
+    // Atributos
     private String nome;
     private Data dataDeNascimento;
     private double altura;
+    private int idade;
 
+    // Métodos Construtores
     public Pessoa(){
 
     }
@@ -14,6 +17,7 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    // Criando getters e setters
     public String getNome() {
         return nome;
     }
@@ -38,10 +42,23 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    public int getIdade(){
+        return idade;
+    }
+
+    // Criando método para calcular idade da pessoa
+    public void calcularIdade(int anoAtual){
+        int idade = anoAtual - dataDeNascimento.getAno();
+        this.idade = idade;
+       // return idade;
+    }
+
+    // Classe responsável por imprimir os dados
     public void imprimirDados(){
         System.out.println("Nome da pessoa: " +nome);
         System.out.println("Data de nascimento da pessoa: " +dataDeNascimento.getDia() +"/"+dataDeNascimento.getMes() + "/"+dataDeNascimento.getAno() );
         System.out.println("Altura da pessoa: " +altura);
+        System.out.println("Idade " +nome +" é: " +idade);
     }
 
 
